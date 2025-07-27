@@ -1,0 +1,16 @@
+name: Devcontainer
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pre-build dev container image
+        uses: devcontainers/ci@v0.3
+        with:
+          imageName: ghcr.io/blocknetwork-eu/devcontainer
+          cacheFrom: ghcr.io/blocknetwork-eu/devcontainer
+          push: always
