@@ -1,5 +1,8 @@
 name: Devcontainer
 
+env:
+  DOCKER_REGISTRY: ghcr.io
+
 on:
   push:
     branches: ["main"]
